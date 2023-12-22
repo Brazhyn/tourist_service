@@ -1,0 +1,134 @@
+
+#welcome {
+    padding: 4rem 12%;
+    background-color: #6305DD;
+}
+
+#welcome header {
+  display: flex;
+  align-items: flex-start;
+  margin: 0.5rem auto;
+}
+
+#welcome img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    object-position: top;
+    border: 5px solid white;
+    border-radius: 12px;
+    background-color: #ffe1bf;
+    transform: rotateZ(-5deg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#welcome h2 {
+  font-size: 3.5rem;
+  margin: 0 0 0 2rem;
+  color: #e4e4e4;
+  width: 10rem;
+}
+
+.about-us {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+p {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.offer{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #E48900;
+}
+
+.center-it {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.name-company {
+    color: #6305DD;
+}
+
+.route-list {
+    list-style-type: none;
+}
+
+.route-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the list item */
+}
+
+/* Style the image inside each list item */
+.route-image {
+    width: 50rem;
+    height: 30rem;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Style the route name */
+.route-name {
+    font-weight: bold;
+}
+
+/* Style the price */
+.route-price {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Center text below the image */
+.route-name,
+.route-price {
+    text-align: center;
+}
+
+.choose-route {
+    margin: 7rem auto;
+    width: 15rem;
+    height: 5rem;
+    background-color: #6305DD;
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Make the button a block element */
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Hover effect for the button */
+.choose-route:hover {
+    background-color: #4E03A8; /* Adjust the color on hover if desired */
+}
+
+.black-line{
+    background-color: #4E03A8;
+    width: 90%;
+    height: 2px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+

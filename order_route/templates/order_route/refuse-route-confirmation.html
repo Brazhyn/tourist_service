@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "order_route/refuse-route.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="message">
+        <p>Користувач успішно відмовився від маршруту та втратив деяку страхову суму!</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "order_route/select-route.css" %}">
+{% endblock %}
+
+{% block content %}
+    <button onclick="window.location.href='{% url 'refuse-route-page' %}'" class="refuse-button">Відмовитися від маршруту</button>
+    <section>
+        <h2 class="form-info">Вкажіть інформацію про себе</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form}}
+            <br>
+            <button>Надіслати дані</button>
+        </form>
+    </section>
+{% endblock %}

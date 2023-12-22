@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "order_route/routes.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div>
+        <p class="center-it">Список доступних маршрутів</p>
+    </div>
+    <div>
+        <ul class="route-list">
+            {% for route in routes %}
+                <li class="route-item">
+                    <img src="{{ route.image.url }}" alt="Зображення не завантажено" class="route-image">
+                    <p class="routes">Назва маршруту: {{ route.name }}</p>
+                    <p class="routes">Вартість: {{ route.price }}$</p>
+                    <p class="routes">Рейтинг: {{ route.rating }}/5</p>
+                    <p class="routes">Опис:<br>{{ route.description }}</p>
+                    <p class="routes">Місце початку маршруту: {{ route.start_location }}</p>
+                    <p class="routes">Місце кінця маршруту: {{ route.end_location }}</p>
+                    <p class="routes">Дата початку маршруту: {{ route.start_date }}</p>
+                    <p class="routes">Дата закінчення маршруту: {{ route.end_date }}</p>
+                    <p class="routes">Назва туристичної групи: {{ route.tourist_group }}</p>
+                </li>
+                <div class="black-line"></div>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+

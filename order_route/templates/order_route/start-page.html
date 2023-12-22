@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "order_route/start-page.css" %}">
+{% endblock %}
+
+{% block content %}
+    <section id="welcome">
+        <header>
+            <img src="{% static 'order_route/images/logo.jpg' %}" alt="Logo">
+            <h2 class="logo">Adventure Horizon</h2>
+        </header>
+    </section>
+    <div class="about-us">
+        <p>Про нас</p>
+    </div>
+    <div>
+        <p>
+            Ми - команда професіоналів, які пристрастно вірять у те, що подорожі - це не просто відпустка,
+            а спосіб відкривати нові знання та збагачувати життя незабутніми пригодами.
+            Вітаємо вас у світі <span class="name-company">Adventure Horizon</span>,
+            де ми створюємо неповторні та захоплюючі моменти для всіх, хто мріє про захопливі подорожі.
+        </p>
+    </div>
+    <div>
+        <div>
+            <p class="center-it">Що ми пропонуємо</p>
+        </div>
+        <div>
+            <h4 class="offer">1. Ексклюзивні Маршрути:</h4>
+            <p>Відправляйтеся в захопливі подорожі, які ми зібрали з урахуванням кожної деталі.
+                Від захоплюючих природничих місць до культурних перлин - ми обираємо найкраще для вас.</p>
+        </div>
+        <div>
+            <h4 class="offer">2. Групові Тури:</h4>
+            <p>Приєднуйтеся до наших дружніх тургруп та насолоджуйтеся подорожжю разом з новими друзями.</p>
+        </div>
+        <div>
+            <h4 class="offer">3. Гнучкі Терміни:</h4>
+            <p>Наша компанія пропонує заздалегідь визначені терміни для кожного маршруту, дозволяючи вам легко планувати
+                свій активний відпочинок.
+                Ви обираєте, коли і куди, а ми робимо ваші мрії про подорож реальністю.</p>
+        </div>
+    </div>
+    <button onclick="window.location.href='{% url 'select-route-page' %}'" class="choose-route">Обрати маршрут</button>
+    <div>
+        <p class="center-it">Популярні маршрути</p>
+        <ul class="route-list">
+            {% for route in routes %}
+                <li class="route-item">
+                    <img src="{{ route.image.url }}" alt="Зображення не завантажено" class="route-image">
+                    <p class="route-name">Назва маршруту: {{ route.name }}</p>
+                    <p class="route-price">Вартість: {{ route.price }}$</p>
+                </li>
+                <div class="black-line"></div>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <p class="center-it">Приєднуйтеся до нас у подорожі, де кожен крок - це новий виток у вашому житті. <br>
+            <span class="name-company">Adventure Horizon</span> - де подорожі стають незабутніми враженнями!</p>
+    </div>
+{% endblock %}
